@@ -7,7 +7,7 @@ def index(request):
     """
     组件样例页面
     """
-    return render_mako_context(request, '/test_component/index.html')
+    return render_mako_context(request, '/demo/index.html')
 
 
 def app_list(request):
