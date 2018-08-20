@@ -61,8 +61,8 @@ $(document).ready(function() {
     });
     $('#job_list tbody').on( 'click', 'button', function () {
       var data = jobTable.row( $(this).parents('tr') ).data();
-      alert( data[1] +"'s id is: "+ data[0] );
-      $.post('${SITE_URL}demo/job_run/', { 'bk_job_id': data[0] });
+      alert('Execute Job ' + data['name'] + '(' + data['bk_job_id'] + ')!');
+      $.post('${SITE_URL}demo/job_run/', { 'bk_job_id': data['bk_job_id'] });
     });
 });
 </script>
