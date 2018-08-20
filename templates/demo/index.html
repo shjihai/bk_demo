@@ -53,17 +53,15 @@ $(document).ready(function() {
           { "data": "creator" },
           { "data": "last_modify_user" },
           { "data": "last_modify_time" },
-          { "data": "bk_job_id" }
-      ],
-      "columnDefs": [{
-          "targets": -1,
-          "data": null,
-          "defaultContent": "<button>Execute!</button>"
-      }]
+          { 
+            "data": null,
+            "defaultContent": "<button>Execute!</button>"
+          }
+      ]
     });
     $('#job_list tbody').on( 'click', 'button', function () {
       var data = table.row( $(this).parents('tr') ).data();
-      alert( data[1] +"'s id is: "+ data[ 5 ] );
+      alert( data[1] +"'s id is: "+ data[0] );
     });
 });
 </script>
