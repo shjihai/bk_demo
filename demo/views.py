@@ -29,7 +29,7 @@ def app_list(request):
     result = client.cc.get_app_list(kwargs)
     return render_json(result)
 
-
+# http://bk.tencent.com/document/bkapi/ce/system/job/get_job_list/
 def job_list(request):
     """
     get jobs
@@ -38,7 +38,7 @@ def job_list(request):
     # 默认从django request中获取用户登录态bk_token
     client = get_client_by_request(request)
     # 组件参数
-    kwargs = {}
+    kwargs = { "bk_biz_id": 2 }
     result = client.job.get_job_list(kwargs)
     return render_json(result)
 
