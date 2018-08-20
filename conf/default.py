@@ -36,8 +36,8 @@ APP_TOKEN = 'b12c1517-eee5-41f6-b23d-52d722fec11a'
 BK_PAAS_HOST = 'http://paas.demo.com'
 
 # 请求官方 API 默认版本号，可选值为："v2" 或 ""；其中，"v2"表示规范化API，""表示未规范化API
-# DEFAULT_BK_API_VER = 'v2'
-DEFAULT_BK_API_VER = ''
+DEFAULT_BK_API_VER = 'v2'
+# DEFAULT_BK_API_VER = ''
 
 # 是否启用celery任务
 IS_USE_CELERY = True
