@@ -1,0 +1,8 @@
+app_code: bk_demo_shjihai
+app_name: DemoShjihai
+author: Hai Ji
+!!python/unicode 'date': '2018-08-20 12:00:00'
+introduction: DemoShjihai is a demo presented by shjihai!
+is_use_celery: true
+language: python
+version: 1.0.0
