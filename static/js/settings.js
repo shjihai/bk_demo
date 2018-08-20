@@ -24,7 +24,8 @@ $.ajaxSetup({
 	    402: function(xhr) {
 	    	// 功能开关
 	    	var _src = xhr.responseText;
-	    	ajax_content = '<iframe name="403_iframe" frameborder="0" src="'+_src+'" style="width:570px;height:400px;"></iframe>';
+	    	ajax_content = '<iframe name="403_iframe" frameborder="0" src="'+_src+'" style="width:570px;height:435px;"></iframe>';
+	    	ajax_content = '<iframe name="403_iframe" frameborder="0" src="'+_src+'" style="width:570px;height:435px;"></iframe>';
 			art.dialog({
 			    title: "提示",
 			    lock: true,
