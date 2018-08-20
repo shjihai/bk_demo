@@ -5,14 +5,14 @@
         <!-- 内容 start-->
         <!--comtactus-detail -->
         <div class="container mt25">
-            <table id="job_list" class="table table-bordered table-hover">
+            <table id="app_list" class="table table-bordered table-hover">
                 <thead>
                     <tr>
-                        <th>bk_job_id</th>
-                        <th>name</th>
-                        <th>creator</th>
-                        <th>last_modify_user</th>
-                        <th>last_modify_time</th>
+                        <th>业务ID</th>
+                        <th>业务名称</th>
+                        <th>创建者</th>
+                        <th>业务负责人</th>
+                        <th>产品负责人</th>
                     </tr>
                 </thead>
             </table>
@@ -36,7 +36,7 @@
         next: '下一页',
       }
     }
-    $('#job_list').dataTable({
+    $('#app_list').dataTable({
       paging: true, //隐藏分页
       ordering: false, //关闭排序
       info: false, //隐藏左下角分页信息
@@ -44,13 +44,13 @@
       pageLength : 5, //每页显示几条数据
       lengthChange: false, //不允许用户改变表格每页显示的记录数
       language: language, //汉化
-      ajax: '${SITE_URL}demo/job_list/',
+      ajax: '${SITE_URL}demo/app_list/',
       columns: [
-          { "data": "bk_job_id" },
-          { "data": "name" },
-          { "data": "creator" },
-          { "data": "last_modify_user" },
-          { "data": "last_modify_time" },
+          { "data": "ApplicationID" },
+          { "data": "ApplicationName" },
+          { "data": "Creator" },
+          { "data": "Maintainers" },
+          { "data": "ProductPm" },
       ]
     });
 </script>

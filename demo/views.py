@@ -5,9 +5,16 @@ from common.mymako import render_mako_context, render_json
 
 def index(request):
     """
-    组件样例页面
+    jobs
     """
     return render_mako_context(request, '/demo/index.html')
+
+
+def apps(request):
+    """
+    apps
+    """
+    return render_mako_context(request, '/demo/apps.html')
 
 
 def app_list(request):
@@ -21,3 +28,17 @@ def app_list(request):
     kwargs = {}
     result = client.cc.get_app_list(kwargs)
     return render_json(result)
+
+
+def job_list(request):
+    """
+    get jobs
+    """
+    # 默认从django settings中获取APP认证信息：应用ID和应用TOKEN
+    # 默认从django request中获取用户登录态bk_token
+    client = get_client_by_request(request)
+    # 组件参数
+    kwargs = {}
+    result = client.job.get_job_list(kwargs)
+    return render_json(result)
+

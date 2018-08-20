@@ -6,4 +6,5 @@ urlpatterns = patterns(
     'demo.views',
     (r'^$', 'index'),
     (r'^app_list/$', 'app_list'),
+    (r'^job_list/$', 'job_list'),
 )
