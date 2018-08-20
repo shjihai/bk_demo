@@ -13,6 +13,7 @@
                         <th>creator</th>
                         <th>last_modify_user</th>
                         <th>last_modify_time</th>
+                        <th>execute</th>
                     </tr>
                 </thead>
             </table>
@@ -51,6 +52,16 @@
           { "data": "creator" },
           { "data": "last_modify_user" },
           { "data": "last_modify_time" },
-      ]
+          { "data": "bk_job_id" }
+      ],
+      "columnDefs": [{
+          "targets": -1,
+          "data": null,
+          "defaultContent": "<button>Execute!</button>"
+      }]
+    });
+    $('#job_list tbody').on( 'click', 'button', function () {
+      var data = table.row( $(this).parents('tr') ).data();
+      alert( data[1] +"'s id is: "+ data[ 5 ] );
     });
 </script>
